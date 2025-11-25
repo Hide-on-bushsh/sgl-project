@@ -1828,7 +1828,7 @@ class ScheduleBatch(ScheduleBatchDisaggregationDecodeMixin):
         seq_lens_cpu = (
             seq_lens_cpu_cache if seq_lens_cpu_cache is not None else self.seq_lens_cpu
         )
-
+        print("=====================[get_model_worker_batch]self.input_ids: ",self.input_ids)
         return ModelWorkerBatch(
             forward_mode=self.forward_mode,
             input_ids=self.input_ids,

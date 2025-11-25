@@ -951,6 +951,7 @@ class Scheduler(
         """A normal scheduler loop."""
         while True:
             recv_reqs = self.recv_requests()
+            print("============================[event_loop_normal]recv_reqs: ", recv_reqs)
             self.process_input_requests(recv_reqs)
 
             batch = self.get_next_batch_to_run()
@@ -958,6 +959,7 @@ class Scheduler(
 
             if batch:
                 result = self.run_batch(batch)
+                print("============================[event_loop_normal]batch is not empty.")
                 self.process_batch_result(batch, result)
             else:
                 # When the server is idle, do self-check and re-init some states
@@ -1141,6 +1143,7 @@ class Scheduler(
                 continue
 
             output = self._request_dispatcher(recv_req)
+            print("==========================[process_input_requests]output: ", output)
             if output is not None:
                 if isinstance(output, RpcReqOutput):
                     if self.recv_from_rpc is not None:
@@ -2019,6 +2022,7 @@ class Scheduler(
         else:  # embedding or reward model
             model_worker_batch = batch.get_model_worker_batch()
             embeddings = self.tp_worker.forward_batch_embedding(model_worker_batch)
+            print("===========================[run_batch]embeddings: ", embeddings)
             ret = EmbeddingBatchResult(embeddings=embeddings)
 
         # Capture prefill end time for EXTEND mode

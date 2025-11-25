@@ -2288,7 +2288,7 @@ class ModelRunner:
 
         if self.eplb_manager is not None:
             self.eplb_manager.on_forward_pass_end()
-
+        print("===========================[forward]output: ",output)
         return output
 
     def _forward_raw(
@@ -2304,6 +2304,7 @@ class ModelRunner:
             if self.device == "cpu"
             else forward_batch.forward_mode.is_cuda_graph
         )
+        print("=======================[_forward_raw]self.graph_runner: ", self.graph_runner)
         can_run_graph = bool(
             mode_check()
             and self.graph_runner
