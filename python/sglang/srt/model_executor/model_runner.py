@@ -517,6 +517,7 @@ class ModelRunner:
             server_args.max_running_requests,
             server_args.max_total_tokens,
         )
+        print("==============================[initialize]self.device: ", self.device)
         if self.device == "cuda":
             self.init_cublas()
             self.init_attention_backend()
@@ -2116,7 +2117,7 @@ class ModelRunner:
             },
         )
         self.graph_runner = graph_runners[self.device](self)
-
+        print("==============================[init_device_graphs]self.graph_runner: ", self.graph_runner)
         after_mem = get_available_gpu_memory(self.device, self.gpu_id)
         self.graph_mem_usage = before_mem - after_mem
         logger.info(
@@ -2317,41 +2318,50 @@ class ModelRunner:
                 skip_attn_backend_init=skip_attn_backend_init,
                 pp_proxy_tensors=pp_proxy_tensors,
             )
+            print("=====================1=====================")
             return ret, can_run_graph
 
         # For MLP sync
         if forward_batch.global_num_tokens_cpu is not None:
+            print("=====================2=====================")
             forward_batch.prepare_mlp_sync_batch(self)
         else:
+            print("=====================3=====================")
             forward_batch.prepare_attn_tp_scatter_input(self)
 
         if forward_batch.forward_mode.is_decode():
+            print("=====================4=====================")
             ret = self.forward_decode(
                 forward_batch,
                 skip_attn_backend_init=skip_attn_backend_init,
                 pp_proxy_tensors=pp_proxy_tensors,
             )
         elif forward_batch.forward_mode.is_split_prefill():
+            print("=====================5=====================")
             ret = self.forward_split_prefill(
                 forward_batch,
                 reinit_attn_backend=reinit_attn_backend,
                 forward_count=split_forward_count,
             )
         elif forward_batch.forward_mode.is_extend(include_draft_extend_v2=True):
+            print("=====================6=====================")
             ret = self.forward_extend(
                 forward_batch,
                 skip_attn_backend_init=skip_attn_backend_init,
                 pp_proxy_tensors=pp_proxy_tensors,
             )
         elif forward_batch.forward_mode.is_idle():
+            print("=====================7=====================")
             ret = self.forward_idle(forward_batch, pp_proxy_tensors=pp_proxy_tensors)
         else:
+            print("=====================8=====================")
             raise ValueError(f"Invalid forward mode: {forward_batch.forward_mode}")
 
         if (
             forward_batch.global_num_tokens_cpu is not None
             and self.pp_group.is_last_rank
         ):
+            print("=====================9=====================")
             forward_batch.post_forward_mlp_sync_batch(ret)
 
         return ret, can_run_graph

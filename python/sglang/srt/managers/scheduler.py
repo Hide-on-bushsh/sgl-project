@@ -2022,7 +2022,7 @@ class Scheduler(
         else:  # embedding or reward model
             model_worker_batch = batch.get_model_worker_batch()
             embeddings = self.tp_worker.forward_batch_embedding(model_worker_batch)
-            print("===========================[run_batch]embeddings: ", embeddings)
+            #print("===========================[run_batch]embeddings: ", embeddings)
             ret = EmbeddingBatchResult(embeddings=embeddings)
 
         # Capture prefill end time for EXTEND mode

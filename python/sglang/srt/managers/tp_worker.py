@@ -191,6 +191,7 @@ class BaseTpWorker(ABC):
 
     def forward_batch_embedding(self, model_worker_batch: ModelWorkerBatch):
         forward_batch = ForwardBatch.init_new(model_worker_batch, self.model_runner)
+        print("=====================[forward_batch_embedding]forward_batch: ", forward_batch)
         logits_output, _ = self.model_runner.forward(forward_batch)
         embeddings = logits_output.embeddings
         return embeddings
