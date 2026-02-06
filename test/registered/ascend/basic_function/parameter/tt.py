@@ -1,10 +1,9 @@
-import subprocess
 import unittest
+from types import SimpleNamespace
 import requests
-import os
-import glob
-from sglang.test.ascend.test_ascend_utils import QWEN2_0_5B_INSTRUCT_WEIGHTS_PATH
 from sglang.srt.utils import kill_process_tree
+from sglang.test.ascend.test_ascend_utils import LLAMA_3_2_1B_INSTRUCT_WEIGHTS_PATH
+from sglang.test.run_eval import run_eval
 from sglang.test.test_utils import (
     DEFAULT_TIMEOUT_FOR_SERVER_LAUNCH,
     DEFAULT_URL_FOR_TEST,
@@ -16,49 +15,43 @@ from sglang.test.ci.ci_register import register_npu_ci
 register_npu_ci(est_time=400, suite="nightly-1-npu-a3", nightly=True)
 
 
-def run_command(cmd, shell=True):
-    try:
-        result = subprocess.run(
-            cmd, shell=shell, capture_output=True, text=True, check=True
-        )
-        return result.stdout
-    except subprocess.CalledProcessError as e:
-        print(f"execute command error: {e}")
-        return None
+class TestEnableMultimodalNonMlm(CustomTestCase):
+    """Testcase: Verify that when the --enable-multimodal parameter is set, the mmlu accuracy is greater than or equal to that when the parameter is not set.
 
+        [Test Category] Parameter
+        [Test Target] --enable-multimodal
+        """
+    model = LLAMA_3_2_1B_INSTRUCT_WEIGHTS_PATH
+    base_url = DEFAULT_URL_FOR_TEST
+    score_with_param = None
+    score_without_param = None
 
-class TestDownloadDir(CustomTestCase):
-    """Testcase：Verify set --download-dir parameter, the parameter take effect and the inference request is successfully processed.
-
-       [Test Category] Parameter
-       [Test Target] --download-dir
-       """
-    model = QWEN2_0_5B_INSTRUCT_WEIGHTS_PATH
-    download_dir = "./weight"
-
-    @classmethod
-    def setUpClass(cls):
-        run_command(f"mkdir -p {cls.download_dir}")
+    def _launch_server(self, enable_multimodal: bool):
+        """Universal server launch method, add --enable-multimodal based on parameters"""
         other_args = [
-                "--download-dir",
-                cls.download_dir,
-                "--attention-backend",
-                "ascend",
-                "--disable-cuda-graph",
-            ]
-        cls.process = popen_launch_server(
-            cls.model,
-            DEFAULT_URL_FOR_TEST,
+            "--trust-remote-code",
+            "--mem-fraction-static",
+            "0.8",
+            "--attention-backend",
+            "ascend",
+            "--disable-cuda-graph",
+        ]
+        # Add multimodal parameter as needed
+        if enable_multimodal:
+            other_args.insert(1, "--enable-multimodal")
+
+        process = popen_launch_server(
+            self.model,
+            self.base_url,
             timeout=DEFAULT_TIMEOUT_FOR_SERVER_LAUNCH,
             other_args=other_args,
         )
+        self.addCleanup(kill_process_tree, process.pid)
+        return process
 
-    @classmethod
-    def tearDownClass(cls):
-        kill_process_tree(cls.process.pid)
-        run_command(f"rm -rf {cls.download_dir}")
-
-    def test_download_dir(self):
+    def _verify_inference(self):
+        """Universal inference function verification"""
+        # Basic generation request verification
         response = requests.post(
             f"{DEFAULT_URL_FOR_TEST}/generate",
             json={
@@ -68,22 +61,46 @@ class TestDownloadDir(CustomTestCase):
                     "max_new_tokens": 32,
                 },
             },
-            timeout=30
         )
         self.assertEqual(response.status_code, 200)
         self.assertIn("Paris", response.text)
 
-        # check model weight
-        weight_suffixes = ("*.safetensors", "*.bin", "*.pth")
-        weight_files = []
-        for suffix in weight_suffixes:
-            weight_files.extend(glob.glob(os.path.join(self.download_dir, "**", suffix), recursive=True))
-        self.assertGreater(
-            len(weight_files),
-            0,
-            msg=f"--download-dir {self.download_dir} No model weight"
+    def _run_mmlu_eval(self) -> float:
+        """Universal MMLU evaluation execution method, returns evaluation score"""
+        args = SimpleNamespace(
+            base_url=self.base_url,
+            model=self.model,
+            eval_name="mmlu",
+            num_examples=64,
+            num_threads=32,
+        )
+        metrics = run_eval(args)
+        # Retain basic score lower limit assertion
+        self.assertGreaterEqual(metrics["score"], 0.2)
+        return metrics["score"]
+
+    def test_01_enable_multimodal(self):
+        self._launch_server(enable_multimodal=True)
+        self._verify_inference()
+        TestEnableMultimodalNonMlm.score_with_param = self._run_mmlu_eval()
+
+    def test_02_disable_multimodal(self):
+        self._launch_server(enable_multimodal=False)
+        self._verify_inference()
+        TestEnableMultimodalNonMlm.score_without_param = self._run_mmlu_eval()
+
+    def test_03_assert_score(self):
+        self.assertIsNotNone(TestEnableMultimodalNonMlm.score_with_param, "MMLU score with parameter not obtained")
+        self.assertIsNotNone(TestEnableMultimodalNonMlm.score_without_param,
+                             "MMLU score without parameter not obtained")
+        # Core assertion: Score with --enable-multimodal ≥ Score without the parameter
+        self.assertGreaterEqual(
+            TestEnableMultimodalNonMlm.score_with_param,
+            TestEnableMultimodalNonMlm.score_without_param,
+            f"MMLU score with --enable-multimodal ({TestEnableMultimodalNonMlm.score_with_param:.4f}) is less than the score without it ({TestEnableMultimodalNonMlm.score_without_param:.4f})"
         )
 
 
 if __name__ == "__main__":
-    unittest.main()
+    unittest.main(verbosity=2)
+
