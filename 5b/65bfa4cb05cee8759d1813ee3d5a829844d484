@@ -1,0 +1,86 @@
+.github/workflows/full-test-npu.yml
+  s_99fbf8ebcb2b98::t_b7c8c594a7556f 119-123,198-202,277-281,356-360
+  s_99fbf8ebcb2b98::t_be387dd0027dc6 425-491
+  s_99fbf8ebcb2b98::t_f46b8e89658952 393-400
+  s_99fbf8ebcb2b98::t_7e3273f4d35689 138-140,217-219,296-298,375-377
+  s_99fbf8ebcb2b98::t_c928648f2c33b5 156-163
+  s_99fbf8ebcb2b98::t_9c419c6d340e4a 235-242
+  s_99fbf8ebcb2b98::t_a23caf5654d476 83
+  s_99fbf8ebcb2b98::t_f5b1e70c9dc767 314-321
+python/sglang/test/ascend/e2e/k8s_single.yaml.jinja2
+  s_99fbf8ebcb2b98::t_15ea375c04441c 64-65
+.github/workflows/_npu-single-node-test-stage.yml
+  s_99fbf8ebcb2b98::t_3c024505a6edf3 61-64
+  s_99fbf8ebcb2b98::t_c3ada53afffff8 435-443
+  s_99fbf8ebcb2b98::t_6cf39f24fa919f 228-230
+  s_99fbf8ebcb2b98::t_5dc47ff4fcfa52 211-219
+python/sglang/test/ascend/e2e/run_npu_e2e_test.py
+  s_99fbf8ebcb2b98::t_15ea375c04441c 217-219,222-228,231-244,247-261,671-674,814-821,972-978,996,1027
+  h_375fef2349b9ff 624
+  s_99fbf8ebcb2b98::t_9f7cadc69e185c 971
+  s_99fbf8ebcb2b98::t_746b768dad5945 220-221
+  s_99fbf8ebcb2b98::t_fc7a367268b8dd 229-230
+  s_99fbf8ebcb2b98::t_b2f26c82d96692 245-246
+  s_99fbf8ebcb2b98::t_1bb0876b012599 262-264
+  s_99fbf8ebcb2b98::t_889c4852d0083f 675-676
+python/sglang/test/ascend/e2e/k8s_multi_pd_mix.yaml.jinja2
+  s_99fbf8ebcb2b98::t_15ea375c04441c 70-71
+.github/workflows/nightly-test-npu.yml
+  s_99fbf8ebcb2b98::t_15ea375c04441c 64-68,403,435
+  s_99fbf8ebcb2b98::t_66839d144d80ea 145,244,261,278,314,331,348
+  s_99fbf8ebcb2b98::t_7636a442dc833a 160,176,194,210,226
+  s_99fbf8ebcb2b98::t_749596764625fe 295
+python/sglang/test/ascend/e2e/k8s_multi_pd_mix_green.yaml.jinja2
+  s_99fbf8ebcb2b98::t_15ea375c04441c 62-63
+python/sglang/test/ascend/e2e/run_npu_testcase.sh
+  s_99fbf8ebcb2b98::t_15ea375c04441c 110-124,172-181
+.github/workflows/_npu-pr-test-stage.yml
+  s_99fbf8ebcb2b98::t_0f40584280268a 269-277
+  s_99fbf8ebcb2b98::t_91386f6dab04bd 213-221
+  s_99fbf8ebcb2b98::t_cd163adb3e41fe 226-228
+  s_99fbf8ebcb2b98::t_f6dc65704c4790 51-54
+.coveragerc
+  s_99fbf8ebcb2b98::t_15ea375c04441c 2-5,10-15
+python/sglang/test/ascend/e2e/k8s_multi_pd_separation_green.yaml.jinja2
+  s_99fbf8ebcb2b98::t_15ea375c04441c 61-62
+.github/workflows/nightly-test-npu-e2e-multi-node.yml
+  s_99fbf8ebcb2b98::t_15ea375c04441c 67-71,115-116,246-250,262-270
+python/sglang/test/ascend/e2e/test_npu_performance_utils.py
+  s_99fbf8ebcb2b98::t_15ea375c04441c 1068-1075,1328-1335
+python/sglang/test/ascend/e2e/k8s_multi_pd_separation.yaml.jinja2
+  s_99fbf8ebcb2b98::t_15ea375c04441c 70-71,189-190,308-309
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.2",
+  "base_commit_sha": "5b65bfa4cb05cee8759d1813ee3d5a829844d484",
+  "prompts": {},
+  "humans": {
+    "h_375fef2349b9ff": {
+      "author": "weixin_50899076 <xujianchao@h-partners.com>"
+    }
+  },
+  "sessions": {
+    "s_99fbf8ebcb2b98": {
+      "agent_id": {
+        "tool": "trae",
+        "id": "6a9a37dc73e24d4255875ce6",
+        "model": "glm-5.3__max"
+      },
+      "human_author": "weixin_50899076 <xujianchao@h-partners.com>",
+      "custom_attributes": {
+        "tool_id": "Edit",
+        "dedupe_key": "6a9a37dc73e24d4255875ce6:6a9a7b9373e24d4255875ecc:afterEdit:6786fc84",
+        "edit_kind": "file_edit",
+        "client_type": "ide",
+        "source_scene": "unknown",
+        "tool_use_id": "6a9a7b9373e24d4255875ecc",
+        "runtime_client": "trae-tob-git-ai",
+        "session_id": "6a9a37dc73e24d4255875ce6",
+        "operation_id": "6a9a7b9373e24d4255875ecc",
+        "tool_type": "agent",
+        "external_session_id": "6a9a37dc73e24d4255875ce6"
+      }
+    }
+  }
+}
