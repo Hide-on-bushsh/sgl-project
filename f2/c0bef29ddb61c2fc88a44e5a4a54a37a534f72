@@ -1,0 +1,14 @@
+.github/workflows/full-test-npu.yml
+  h_678a0728e63977 6
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.2",
+  "base_commit_sha": "f2c0bef29ddb61c2fc88a44e5a4a54a37a534f72",
+  "prompts": {},
+  "humans": {
+    "h_678a0728e63977": {
+      "author": "Hide-on-bushsh <978716854@qq.com>"
+    }
+  }
+}
