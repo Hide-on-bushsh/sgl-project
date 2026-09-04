@@ -1,0 +1,65 @@
+python/sglang/test/ascend/e2e/k8s_multi_pd_separation_green.yaml.jinja2
+  s_99fbf8ebcb2b98::t_15ea375c04441c 61-62
+python/sglang/test/ascend/e2e/run_npu_e2e_test.py
+  s_99fbf8ebcb2b98::t_15ea375c04441c 217-219,222-228,231-244,247-261,671-674,814-821,972-978,996,1027
+  s_99fbf8ebcb2b98::t_9f7cadc69e185c 971
+  h_375fef2349b9ff 624
+.coveragerc
+  s_99fbf8ebcb2b98::t_15ea375c04441c 2-5,10-15
+.github/workflows/nightly-test-npu-e2e-multi-node.yml
+  s_99fbf8ebcb2b98::t_15ea375c04441c 67-71,115-116,246-250,262-270
+python/sglang/test/ascend/e2e/run_npu_testcase.sh
+  s_99fbf8ebcb2b98::t_15ea375c04441c 110-124,172-181
+python/sglang/test/ascend/e2e/k8s_multi_pd_separation.yaml.jinja2
+  s_99fbf8ebcb2b98::t_15ea375c04441c 70-71,189-190,308-309
+.github/workflows/nightly-test-npu.yml
+  s_99fbf8ebcb2b98::t_15ea375c04441c 64-68,390,422
+python/sglang/test/ascend/e2e/k8s_single.yaml.jinja2
+  s_99fbf8ebcb2b98::t_15ea375c04441c 64-65
+python/sglang/test/ascend/e2e/test_npu_performance_utils.py
+  s_99fbf8ebcb2b98::t_15ea375c04441c 1068-1075,1328-1335
+.github/workflows/full-test-npu.yml
+  s_99fbf8ebcb2b98::t_9c419c6d340e4a 227-234
+  s_99fbf8ebcb2b98::t_7e3273f4d35689 138-140,209-211,288-290,359-361
+  s_99fbf8ebcb2b98::t_be387dd0027dc6 401-467
+  s_99fbf8ebcb2b98::t_b7c8c594a7556f 119-123,190-194,269-273,340-344
+  s_99fbf8ebcb2b98::t_a23caf5654d476 83
+python/sglang/test/ascend/e2e/k8s_multi_pd_mix_green.yaml.jinja2
+  s_99fbf8ebcb2b98::t_15ea375c04441c 62-63
+python/sglang/test/ascend/e2e/k8s_multi_pd_mix.yaml.jinja2
+  s_99fbf8ebcb2b98::t_15ea375c04441c 70-71
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.2",
+  "base_commit_sha": "0b8a41d39467defe7f36c9fcc8dbb1bcd9d337d1",
+  "prompts": {},
+  "humans": {
+    "h_375fef2349b9ff": {
+      "author": "weixin_50899076 <xujianchao@h-partners.com>"
+    }
+  },
+  "sessions": {
+    "s_99fbf8ebcb2b98": {
+      "agent_id": {
+        "tool": "trae",
+        "id": "6a9a37dc73e24d4255875ce6",
+        "model": "glm-5.3__max"
+      },
+      "human_author": "weixin_50899076 <xujianchao@h-partners.com>",
+      "custom_attributes": {
+        "operation_id": "6a9a3e9073e24d4255875e19",
+        "session_id": "6a9a37dc73e24d4255875ce6",
+        "runtime_client": "trae-tob-git-ai",
+        "source_scene": "unknown",
+        "dedupe_key": "6a9a37dc73e24d4255875ce6:6a9a3e9073e24d4255875e19:afterEdit:44b6eef7",
+        "tool_type": "agent",
+        "client_type": "ide",
+        "edit_kind": "file_edit",
+        "external_session_id": "6a9a37dc73e24d4255875ce6",
+        "tool_id": "Edit",
+        "tool_use_id": "6a9a3e9073e24d4255875e19"
+      }
+    }
+  }
+}
