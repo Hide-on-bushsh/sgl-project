@@ -1,0 +1,74 @@
+.github/workflows/nightly-test-npu.yml
+  s_99fbf8ebcb2b98::t_15ea375c04441c 64-68,390,422
+python/sglang/test/ascend/e2e/run_npu_e2e_test.py
+  s_99fbf8ebcb2b98::t_9f7cadc69e185c 971
+  s_99fbf8ebcb2b98::t_15ea375c04441c 217-261,671-676,707,732,762,814-820,972-978,996,1027
+  h_375fef2349b9ff 624
+  s_99fbf8ebcb2b98::t_64f84b94657d44 262-264
+  s_99fbf8ebcb2b98::t_dd51dae5000882 821
+python/sglang/test/ascend/e2e/k8s_multi_pd_separation_green.yaml.jinja2
+  s_99fbf8ebcb2b98::t_15ea375c04441c 61-62
+python/sglang/test/ascend/e2e/k8s_single.yaml.jinja2
+  s_99fbf8ebcb2b98::t_15ea375c04441c 64-65
+.github/workflows/nightly-test-npu-e2e-multi-node.yml
+  s_99fbf8ebcb2b98::t_15ea375c04441c 67-71,115-116,246-250,262-269
+  s_99fbf8ebcb2b98::t_58430ca1ff50f9 270
+.github/workflows/full-test-npu.yml
+  s_99fbf8ebcb2b98::t_9c419c6d340e4a 156,161,163,235-242,314,319,321,393,398,400
+  s_99fbf8ebcb2b98::t_7e3273f4d35689 138-140,217-219,296-298,375-377
+  s_99fbf8ebcb2b98::t_be387dd0027dc6 157-159,162,315-317,320,394-396,399,426-491
+  s_99fbf8ebcb2b98::t_a23caf5654d476 83
+  s_99fbf8ebcb2b98::t_b7c8c594a7556f 119-123,198-202,277-281,356-360
+  s_99fbf8ebcb2b98::t_74d6fae4d0280e 160
+  s_99fbf8ebcb2b98::t_419782b7ed2a96 318
+  s_99fbf8ebcb2b98::t_aa1ec9377f04fb 397
+  s_99fbf8ebcb2b98::t_b36f582f2676a5 425
+python/sglang/test/ascend/e2e/test_npu_performance_utils.py
+  s_99fbf8ebcb2b98::t_15ea375c04441c 1068-1075,1328-1334
+  s_99fbf8ebcb2b98::t_0bd24974f45776 1335
+python/sglang/test/ascend/e2e/run_npu_testcase.sh
+  s_99fbf8ebcb2b98::t_15ea375c04441c 110-124,172-181
+python/sglang/test/ascend/e2e/k8s_multi_pd_mix.yaml.jinja2
+  s_99fbf8ebcb2b98::t_15ea375c04441c 70-71
+python/sglang/test/ascend/e2e/k8s_multi_pd_separation.yaml.jinja2
+  s_99fbf8ebcb2b98::t_15ea375c04441c 70-71,189-190,308-309
+python/sglang/test/ascend/e2e/k8s_multi_pd_mix_green.yaml.jinja2
+  s_99fbf8ebcb2b98::t_15ea375c04441c 62-63
+.coveragerc
+  s_99fbf8ebcb2b98::t_15ea375c04441c 2-5,10-14
+  s_99fbf8ebcb2b98::t_a8db2ec31ec817 15
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.2",
+  "base_commit_sha": "950e72be2038a6e437b9265f08a832bbc743acbf",
+  "prompts": {},
+  "humans": {
+    "h_375fef2349b9ff": {
+      "author": "weixin_50899076 <xujianchao@h-partners.com>"
+    }
+  },
+  "sessions": {
+    "s_99fbf8ebcb2b98": {
+      "agent_id": {
+        "tool": "trae",
+        "id": "6a9a37dc73e24d4255875ce6",
+        "model": "glm-5.3__max"
+      },
+      "human_author": "weixin_50899076 <xujianchao@h-partners.com>",
+      "custom_attributes": {
+        "runtime_client": "trae-tob-git-ai",
+        "edit_kind": "file_edit",
+        "tool_type": "agent",
+        "tool_use_id": "6a9a3e9073e24d4255875e19",
+        "operation_id": "6a9a3e9073e24d4255875e19",
+        "tool_id": "Edit",
+        "external_session_id": "6a9a37dc73e24d4255875ce6",
+        "source_scene": "unknown",
+        "session_id": "6a9a37dc73e24d4255875ce6",
+        "client_type": "ide",
+        "dedupe_key": "6a9a37dc73e24d4255875ce6:6a9a3e9073e24d4255875e19:afterEdit:44b6eef7"
+      }
+    }
+  }
+}
