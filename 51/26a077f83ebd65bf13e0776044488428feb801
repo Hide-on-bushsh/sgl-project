@@ -1,0 +1,36 @@
+.github/workflows/full-test-npu.yml
+  s_99fbf8ebcb2b98::t_4e828350f9ea9e 4-8
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.2",
+  "base_commit_sha": "5126a077f83ebd65bf13e0776044488428feb801",
+  "prompts": {},
+  "humans": {
+    "h_678a0728e63977": {
+      "author": "Hide-on-bushsh <978716854@qq.com>"
+    }
+  },
+  "sessions": {
+    "s_99fbf8ebcb2b98": {
+      "agent_id": {
+        "tool": "trae",
+        "id": "6a9a37dc73e24d4255875ce6",
+        "model": "glm-5.3__max"
+      },
+      "human_author": "Hide-on-bushsh <978716854@qq.com>",
+      "custom_attributes": {
+        "operation_id": "6a9ab54c73e24d4255875f69",
+        "source_scene": "agent",
+        "external_session_id": "6a9a37dc73e24d4255875ce6",
+        "display_model_name": "GLM-5.3",
+        "runtime_client": "trae-tob-git-ai",
+        "edit_kind": "bash",
+        "tool_name": "RunCommand",
+        "tool_use_id": "6a9ab54c73e24d4255875f69",
+        "session_id": "6a9a37dc73e24d4255875ce6",
+        "client_type": "ide"
+      }
+    }
+  }
+}
