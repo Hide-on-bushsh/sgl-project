@@ -1,0 +1,40 @@
+.github/workflows/full-test-npu.yml
+  s_99fbf8ebcb2b98::t_64ac93c286fc21 321-349,351-378
+.github/workflows/nightly-test-npu.yml
+  s_99fbf8ebcb2b98::t_30c5bb585ce5a7 350-357,359-365
+test/run_suite.py
+  s_99fbf8ebcb2b98::t_23296b5f688967 256-260
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.2",
+  "base_commit_sha": "ce5ee00646766d9fd808b517e88532fdaaa1dd39",
+  "prompts": {},
+  "humans": {
+    "h_678a0728e63977": {
+      "author": "Hide-on-bushsh <978716854@qq.com>"
+    }
+  },
+  "sessions": {
+    "s_99fbf8ebcb2b98": {
+      "agent_id": {
+        "tool": "trae",
+        "id": "6a9a37dc73e24d4255875ce6",
+        "model": "glm-5.3-flash__max"
+      },
+      "human_author": "Hide-on-bushsh <978716854@qq.com>",
+      "custom_attributes": {
+        "session_id": "6a9a37dc73e24d4255875ce6",
+        "tool_use_id": "6a9eb05a02aa83e2b74d6910",
+        "operation_id": "6a9eb05a02aa83e2b74d6910",
+        "client_type": "ide",
+        "runtime_client": "trae-tob-git-ai",
+        "source_scene": "agent",
+        "display_model_name": "GLM-5.3-Flash",
+        "external_session_id": "6a9a37dc73e24d4255875ce6",
+        "tool_name": "Edit",
+        "edit_kind": "file_edit"
+      }
+    }
+  }
+}
