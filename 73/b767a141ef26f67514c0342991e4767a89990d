@@ -1,3 +1,5 @@
+.github/workflows/full-test-npu.yml
+  s_99fbf8ebcb2b98::t_945a0116cd5489 4-8
 ---
 {
   "schema_version": "authorship/3.0.0",
@@ -18,17 +20,17 @@
       },
       "human_author": "Hide-on-bushsh <978716854@qq.com>",
       "custom_attributes": {
-        "external_session_id": "6a9a37dc73e24d4255875ce6",
-        "tool_id": "Edit",
-        "source_scene": "unknown",
-        "edit_kind": "file_edit",
-        "dedupe_key": "6a9a37dc73e24d4255875ce6:6a9e7b2b02aa83e2b74d6807:afterEdit:78f9457c",
         "tool_use_id": "6a9e7b2b02aa83e2b74d6807",
         "operation_id": "6a9e7b2b02aa83e2b74d6807",
-        "runtime_client": "trae-tob-git-ai",
+        "dedupe_key": "6a9a37dc73e24d4255875ce6:6a9e7b2b02aa83e2b74d6807:afterEdit:78f9457c",
+        "session_id": "6a9a37dc73e24d4255875ce6",
+        "source_scene": "unknown",
+        "tool_id": "Edit",
         "tool_type": "agent",
+        "runtime_client": "trae-tob-git-ai",
         "client_type": "ide",
-        "session_id": "6a9a37dc73e24d4255875ce6"
+        "edit_kind": "file_edit",
+        "external_session_id": "6a9a37dc73e24d4255875ce6"
       }
     }
   }
