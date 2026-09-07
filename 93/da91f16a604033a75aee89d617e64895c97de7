@@ -1,0 +1,38 @@
+.github/workflows/_npu-pr-test-stage.yml
+  s_99fbf8ebcb2b98::t_b955bc49ccbd7a 233
+  s_99fbf8ebcb2b98::t_b9a70a86917883 193
+.github/workflows/nightly-test-npu-e2e-multi-node.yml
+  s_99fbf8ebcb2b98::t_50e26f9bae8899 314-315
+  s_99fbf8ebcb2b98::t_deb38d5ac70103 109-111,113
+.github/workflows/_npu-single-node-test-stage.yml
+  s_99fbf8ebcb2b98::t_9004499f414b80 213
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.2",
+  "base_commit_sha": "93da91f16a604033a75aee89d617e64895c97de7",
+  "prompts": {},
+  "sessions": {
+    "s_99fbf8ebcb2b98": {
+      "agent_id": {
+        "tool": "trae",
+        "id": "6a9a37dc73e24d4255875ce6",
+        "model": "glm-5.3-flash__max"
+      },
+      "human_author": "Hide-on-bushsh <978716854@qq.com>",
+      "custom_attributes": {
+        "tool_use_id": "6a9eb4fe02aa83e2b74d6971",
+        "dedupe_key": "6a9a37dc73e24d4255875ce6:6a9eb4fe02aa83e2b74d6971:afterEdit:0ed13826",
+        "source_scene": "unknown",
+        "external_session_id": "6a9a37dc73e24d4255875ce6",
+        "client_type": "ide",
+        "tool_id": "Edit",
+        "operation_id": "6a9eb4fe02aa83e2b74d6971",
+        "session_id": "6a9a37dc73e24d4255875ce6",
+        "edit_kind": "file_edit",
+        "runtime_client": "trae-tob-git-ai",
+        "tool_type": "agent"
+      }
+    }
+  }
+}
