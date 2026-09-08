@@ -1,0 +1,49 @@
+.github/workflows/full-test-npu.yml
+  s_99fbf8ebcb2b98::t_19e306f6227028 191
+  s_99fbf8ebcb2b98::t_6a446289eff8d5 296
+  s_99fbf8ebcb2b98::t_8a2c00cf314de8 76
+  s_99fbf8ebcb2b98::t_038e15844a0706 243
+  s_99fbf8ebcb2b98::t_56d5be71d480a8 226
+.github/workflows/nightly-test-npu.yml
+  s_99fbf8ebcb2b98::t_8a409730c6bf98 252-253
+  s_99fbf8ebcb2b98::t_76dfddf8803395 306-307
+  s_99fbf8ebcb2b98::t_175b71ace9a255 184-185
+  s_99fbf8ebcb2b98::t_56d47d0ad82de1 341-342
+  s_99fbf8ebcb2b98::t_262139858e6c44 166-167
+  s_99fbf8ebcb2b98::t_31a4efde2e4d1f 234-235
+  s_99fbf8ebcb2b98::t_6113310cf615cb 132-133
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.2",
+  "base_commit_sha": "d73e312801151de50e2e8d55a4ba261aa07e19b9",
+  "prompts": {},
+  "humans": {
+    "h_678a0728e63977": {
+      "author": "Hide-on-bushsh <978716854@qq.com>"
+    }
+  },
+  "sessions": {
+    "s_99fbf8ebcb2b98": {
+      "agent_id": {
+        "tool": "trae",
+        "id": "6a9a37dc73e24d4255875ce6",
+        "model": "kimi-k3__max"
+      },
+      "human_author": "Hide-on-bushsh <978716854@qq.com>",
+      "custom_attributes": {
+        "tool_id": "Edit",
+        "external_session_id": "6a9a37dc73e24d4255875ce6",
+        "edit_kind": "file_edit",
+        "source_scene": "unknown",
+        "runtime_client": "trae-tob-git-ai",
+        "tool_type": "agent",
+        "dedupe_key": "6a9a37dc73e24d4255875ce6:6a9fb5185fb81b138bcf746f:afterEdit:6786fc84",
+        "session_id": "6a9a37dc73e24d4255875ce6",
+        "operation_id": "6a9fb5185fb81b138bcf746f",
+        "tool_use_id": "6a9fb5185fb81b138bcf746f",
+        "client_type": "ide"
+      }
+    }
+  }
+}
