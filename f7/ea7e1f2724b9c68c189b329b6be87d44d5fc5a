@@ -1,0 +1,14 @@
+.github/workflows/full-test-npu.yml
+  h_678a0728e63977 198,215,232
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.2",
+  "base_commit_sha": "f7ea7e1f2724b9c68c189b329b6be87d44d5fc5a",
+  "prompts": {},
+  "humans": {
+    "h_678a0728e63977": {
+      "author": "Hide-on-bushsh <978716854@qq.com>"
+    }
+  }
+}
