@@ -1,0 +1,32 @@
+.github/workflows/_npu-single-node-test-stage.yml
+  s_99fbf8ebcb2b98::t_d4eca5c66161f6 421-424
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.2",
+  "base_commit_sha": "a88d17ddd3863f2feee0f13b53894188e56297c6",
+  "prompts": {},
+  "sessions": {
+    "s_99fbf8ebcb2b98": {
+      "agent_id": {
+        "tool": "trae",
+        "id": "6a9a37dc73e24d4255875ce6",
+        "model": "kimi-k3__max"
+      },
+      "human_author": "Hide-on-bushsh <978716854@qq.com>",
+      "custom_attributes": {
+        "runtime_client": "trae-tob-git-ai",
+        "operation_id": "6a9fbcf85fb81b138bcf74e2",
+        "edit_kind": "file_edit",
+        "tool_type": "agent",
+        "tool_use_id": "6a9fbcf85fb81b138bcf74e2",
+        "source_scene": "unknown",
+        "session_id": "6a9a37dc73e24d4255875ce6",
+        "client_type": "ide",
+        "tool_id": "Edit",
+        "dedupe_key": "6a9a37dc73e24d4255875ce6:6a9fbcf85fb81b138bcf74e2:afterEdit:4ad90ef0",
+        "external_session_id": "6a9a37dc73e24d4255875ce6"
+      }
+    }
+  }
+}

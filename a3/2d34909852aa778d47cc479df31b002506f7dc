@@ -1,0 +1,36 @@
+.github/workflows/full-test-npu.yml
+  s_99fbf8ebcb2b98::t_02a0deed998adc 538-543
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.2",
+  "base_commit_sha": "a32d34909852aa778d47cc479df31b002506f7dc",
+  "prompts": {},
+  "humans": {
+    "h_678a0728e63977": {
+      "author": "Hide-on-bushsh <978716854@qq.com>"
+    }
+  },
+  "sessions": {
+    "s_99fbf8ebcb2b98": {
+      "agent_id": {
+        "tool": "trae",
+        "id": "6a9a37dc73e24d4255875ce6",
+        "model": "kimi-k3__max"
+      },
+      "human_author": "Hide-on-bushsh <978716854@qq.com>",
+      "custom_attributes": {
+        "client_type": "ide",
+        "edit_kind": "bash",
+        "source_scene": "agent",
+        "tool_name": "RunCommand",
+        "operation_id": "6a9fd2c75fb81b138bcf7590",
+        "external_session_id": "6a9a37dc73e24d4255875ce6",
+        "display_model_name": "Kimi-K3",
+        "tool_use_id": "6a9fd2c75fb81b138bcf7590",
+        "runtime_client": "trae-tob-git-ai",
+        "session_id": "6a9a37dc73e24d4255875ce6"
+      }
+    }
+  }
+}

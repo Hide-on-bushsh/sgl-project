@@ -1,0 +1,41 @@
+.github/workflows/full-test-npu.yml
+  s_99fbf8ebcb2b98::t_eba58fee63eeb4 461-463,468,472,474-482
+  s_99fbf8ebcb2b98::t_19e306f6227028 187
+  s_99fbf8ebcb2b98::t_6a446289eff8d5 289
+  s_99fbf8ebcb2b98::t_8a2c00cf314de8 76
+  s_99fbf8ebcb2b98::t_038e15844a0706 238
+  s_99fbf8ebcb2b98::t_56d5be71d480a8 221
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.2",
+  "base_commit_sha": "ab4c27b65851e8b15507072cf04b60492d7445a9",
+  "prompts": {},
+  "humans": {
+    "h_678a0728e63977": {
+      "author": "Hide-on-bushsh <978716854@qq.com>"
+    }
+  },
+  "sessions": {
+    "s_99fbf8ebcb2b98": {
+      "agent_id": {
+        "tool": "trae",
+        "id": "6a9a37dc73e24d4255875ce6",
+        "model": "kimi-k3__max"
+      },
+      "human_author": "Hide-on-bushsh <978716854@qq.com>",
+      "custom_attributes": {
+        "display_model_name": "Kimi-K3",
+        "tool_use_id": "6a9f86205fb81b138bcf738f",
+        "tool_name": "Edit",
+        "session_id": "6a9a37dc73e24d4255875ce6",
+        "source_scene": "agent",
+        "runtime_client": "trae-tob-git-ai",
+        "edit_kind": "file_edit",
+        "external_session_id": "6a9a37dc73e24d4255875ce6",
+        "client_type": "ide",
+        "operation_id": "6a9f86205fb81b138bcf738f"
+      }
+    }
+  }
+}
