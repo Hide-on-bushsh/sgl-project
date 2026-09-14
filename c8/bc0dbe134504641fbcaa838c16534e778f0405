@@ -1,0 +1,38 @@
+.github/workflows/nightly-test-npu-e2e-multi-node.yml
+  s_99fbf8ebcb2b98::t_2ff9008bc6ad30 155-159
+test/run_suite.py
+  s_99fbf8ebcb2b98::t_83d18c68d23d14 339-342
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.2",
+  "base_commit_sha": "c8bc0dbe134504641fbcaa838c16534e778f0405",
+  "prompts": {},
+  "humans": {
+    "h_678a0728e63977": {
+      "author": "Hide-on-bushsh <978716854@qq.com>"
+    }
+  },
+  "sessions": {
+    "s_99fbf8ebcb2b98": {
+      "agent_id": {
+        "tool": "trae",
+        "id": "6a9a37dc73e24d4255875ce6",
+        "model": "kimi-k3__max"
+      },
+      "human_author": "Hide-on-bushsh <978716854@qq.com>",
+      "custom_attributes": {
+        "display_model_name": "Kimi-K3",
+        "tool_name": "Edit",
+        "external_session_id": "6a9a37dc73e24d4255875ce6",
+        "runtime_client": "trae-tob-git-ai",
+        "operation_id": "6a9f7d045fb81b138bcf72c5",
+        "edit_kind": "file_edit",
+        "client_type": "ide",
+        "source_scene": "agent",
+        "tool_use_id": "6a9f7d045fb81b138bcf72c5",
+        "session_id": "6a9a37dc73e24d4255875ce6"
+      }
+    }
+  }
+}

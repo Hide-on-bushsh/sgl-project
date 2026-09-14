@@ -1,0 +1,49 @@
+.github/workflows/full-test-npu.yml
+  s_7acad37009e077::t_97e3486b9df02c 393
+  s_7acad37009e077::t_eb4a8728e677dd 269
+  s_7acad37009e077::t_f2cdc7f978d6de 286
+  s_7acad37009e077::t_2650f246f0e3b0 425
+  s_7acad37009e077::t_1a301735ed0454 98-100
+  s_7acad37009e077::t_48190edfda7e82 303
+  s_7acad37009e077::t_6e5e73b5158e38 252
+.github/workflows/nightly-test-npu.yml
+  s_7acad37009e077::t_d64db8e822d322 381
+  s_7acad37009e077::t_a4d66bcf76d7fd 280
+  s_7acad37009e077::t_a4a4b7fb9cd642 246
+  s_7acad37009e077::t_8fb9fd1d9bc909 263
+  s_7acad37009e077::t_56ba19b3501687 227-229
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.2",
+  "base_commit_sha": "3e5e549463a350ce2d90f2ec6b77a3f9df5e4616",
+  "prompts": {},
+  "humans": {
+    "h_678a0728e63977": {
+      "author": "Hide-on-bushsh <978716854@qq.com>"
+    }
+  },
+  "sessions": {
+    "s_7acad37009e077": {
+      "agent_id": {
+        "tool": "trae",
+        "id": "6a9ffb615fb81b138bcf759f",
+        "model": "glm-5.3__max"
+      },
+      "human_author": "Hide-on-bushsh <978716854@qq.com>",
+      "custom_attributes": {
+        "client_type": "ide",
+        "edit_kind": "file_edit",
+        "runtime_client": "trae-tob-git-ai",
+        "tool_type": "agent",
+        "tool_id": "Edit",
+        "dedupe_key": "6a9ffb615fb81b138bcf759f:6aa277d42c08807e333e7b5e:afterEdit:78f9457c",
+        "operation_id": "6aa277d42c08807e333e7b5e",
+        "external_session_id": "6a9ffb615fb81b138bcf759f",
+        "tool_use_id": "6aa277d42c08807e333e7b5e",
+        "session_id": "6a9ffb615fb81b138bcf759f",
+        "source_scene": "unknown"
+      }
+    }
+  }
+}
